@@ -1,34 +1,40 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ParticleController : MonoBehaviour
 {
-    public GameObject cow;  // Объект коровы
+    public List<GameObject> cows;  // Список объектов коров
     public ParticleSystem splashParticles;  // Система частиц
     public float shrinkingTime = 2f; // время за которое корова будет уменьшаться
+    public float deathSceneDelay = 2f; // время задержки перед отображением сцены смерти
 
-    private Rigidbody2D cowRigidbody;  // Rigidbody2D коровы
+    private List<Rigidbody2D> cowRigidbodies = new List<Rigidbody2D>();  // Список Rigidbody2D коров
 
     void Start()
     {
-        cowRigidbody = cow.GetComponent<Rigidbody2D>();
+        // Получаем компоненты Rigidbody2D для всех коров
+        foreach (GameObject cow in cows)
+        {
+            cowRigidbodies.Add(cow.GetComponent<Rigidbody2D>());
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         // Проверяем, является ли объект, вошедший в триггер, коровой
-        if (other.gameObject == cow)
+        if (cows.Contains(other.gameObject))
         {
             // Если это так, воспроизводим систему частиц
             splashParticles.Play();
             Debug.Log("Cow entered the lake trigger area!");
-            cowRigidbody.simulated = false;  // Отключаем Rigidbody2D коровы
-            StartCoroutine(ShrinkAndDie());
+            other.attachedRigidbody.simulated = false;  // Отключаем Rigidbody2D коровы
+            StartCoroutine(ShrinkAndDie(other.gameObject));
         }
     }
 
-    private IEnumerator ShrinkAndDie()
+    private IEnumerator ShrinkAndDie(GameObject cow)
     {
         float timer = 0;
         Vector3 originalScale = cow.transform.localScale;
@@ -40,6 +46,9 @@ public class ParticleController : MonoBehaviour
             cow.transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, t);
             yield return null;
         }
+        
+        // Задержка перед отображением сцены смерти
+        yield return new WaitForSeconds(deathSceneDelay);
         
         // Здесь нужно вставить имя сцены смерти
         SceneManager.LoadScene("Dead_scene");

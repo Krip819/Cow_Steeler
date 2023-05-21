@@ -1,22 +1,29 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlanetBoundary : MonoBehaviour
 {
-    public CowBehavior cowBehavior; // ссылка на поведение коровы
+    public List<CowBehavior> cowBehaviors; // ссылка на поведения коров
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == cowBehavior.gameObject)
+        foreach (CowBehavior cowBehavior in cowBehaviors)
         {
-            cowBehavior.StopAbduction();
+            if (other.gameObject == cowBehavior.gameObject)
+            {
+                cowBehavior.StopAbduction();
+            }
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == cowBehavior.gameObject)
+        foreach (CowBehavior cowBehavior in cowBehaviors)
         {
-            cowBehavior.StartAbduction();
+            if (other.gameObject == cowBehavior.gameObject)
+            {
+                cowBehavior.StartAbduction();
+            }
         }
     }
 }

@@ -93,6 +93,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8061561836847819809}
+  - component: {fileID: 4840034883622702894}
+  - component: {fileID: 6617669672405192766}
+  - component: {fileID: 7998041589788877283}
   m_Layer: 0
   m_Name: UFO_prefab
   m_TagString: Untagged
@@ -117,6 +120,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4840034883622702894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061561836847819810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad13bddafb6e2224ca7462cc65c47b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 40
+--- !u!114 &6617669672405192766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061561836847819810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42d1ec7f13df2c4db1211d562eab21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowsRigidbodies: []
+  beamLight: {fileID: 8061561837232469589}
+  ufoShip: {fileID: 8061561836678571875}
+  pullStrength: 1
+--- !u!114 &7998041589788877283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061561836847819810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427de2a8471709740b8acf38ae1f1ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowsRigidbodies: []
+  ufoShip: {fileID: 8061561836678571875}
+  abductionDistance: 0.6
+  shrinkTime: 0.15
+  victorySceneName: Victory_Scene_2
 --- !u!1 &8061561837232469591
 GameObject:
   m_ObjectHideFlags: 0

@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482745082968367896}
+  - component: {fileID: 3545998072641064159}
   m_Layer: 0
   m_Name: Rook_prefab
   m_TagString: Untagged
@@ -116,3 +117,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &3545998072641064159
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2690225944067575135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5737298, y: 0.04258126}
+      - {x: -0.0099633, y: 0.5815416}
+      - {x: -0.6575501, y: -0.071717456}
+      - {x: -1.1503224, y: -0.74709237}
+      - {x: -1.2403488, y: -1.1080471}
+      - {x: 0.11496997, y: -0.94845206}
+      - {x: 1.3178114, y: -1.2019675}
+      - {x: 0.9809463, y: -0.41830337}
