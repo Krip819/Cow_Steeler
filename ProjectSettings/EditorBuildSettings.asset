@@ -5,16 +5,36 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/main_menu.unity
+    guid: 46affcdc83079234d805ad0bcfd1f359
   - enabled: 1
     path: Assets/Scenes/Dead_scene.unity
-    guid: 88957d945e6d6b5478081da3d3fcdffa
+    guid: 60b9fdcb876b3ca44822d344ff046826
+  - enabled: 1
+    path: Assets/Scenes/level_1.unity
+    guid: eb81d9cdf2f78984fa21799ca60b9ea7
+  - enabled: 1
+    path: Assets/Scenes/Victory_Scene_1.unity
+    guid: c76434626bd7bc442a341650b59fc1bc
   - enabled: 1
     path: Assets/Scenes/level_2.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/Victory_Scene_2.unity
     guid: de42044e71ff6174695515475ca0cb79
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/level_3.unity
+    guid: 70c8a0bf8ee772241b2743c2d144cba2
+  - enabled: 1
+    path: Assets/Scenes/Victory_Scene_3.unity
+    guid: f4795e9db96afc042ba405c6227c59ee
+  - enabled: 1
+    path: Assets/Scenes/level_4.unity
+    guid: 6f9869d22355a3e4d9dcedfa60352a6e
+  - enabled: 1
+    path: Assets/Scenes/Victory_Scene_4.unity
+    guid: aa963f55f1c92454d8a160099838e4a1
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8b24fd89d97c9154b8117fe71836ea01, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7ea6f3e6771e21745a8e6993947e467e, type: 2}

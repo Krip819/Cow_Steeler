@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb367f1e5fc675845a11cf47e9bde2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: level_3
+  nextLevelName: level_2
   mainMenuName: main_menu
 --- !u!1 &1898303069
 GameObject:

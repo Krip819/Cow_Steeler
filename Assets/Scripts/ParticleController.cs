@@ -50,6 +50,9 @@ public class ParticleController : MonoBehaviour
         // Задержка перед отображением сцены смерти
         yield return new WaitForSeconds(deathSceneDelay);
         
+        // Сохраняем текущую сцену перед переходом на экран смерти
+        PlayerPrefs.SetInt("lastScene", SceneManager.GetActiveScene().buildIndex);
+        
         // Здесь нужно вставить имя сцены смерти
         SceneManager.LoadScene("Dead_scene");
     }
